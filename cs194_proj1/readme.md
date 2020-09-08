@@ -7,7 +7,7 @@ produce a color image. The basic method is to extract the three color
 channel images, place them on top of each other, and align them so that
 they form a single RGB color image.
 
-Data {style="font-size: 1.5em;"}
+Data 
 ----
 
 I used 17 digitized Prokudin-Gorskii glass plate images in this program.
