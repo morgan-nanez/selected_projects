@@ -1,6 +1,6 @@
 # Overview
 
-This is private repo that contains school projects I either did alone from scratch or contributed heavily. Each project is within  it's respective folder.
+This is a private repo that contains school projects I either did alone from scratch or contributed heavily. Each project is within it's respective folder.
 
 ## Colorizing the Prokudin-Gorskii photo collection [cs194_proj1]
 
