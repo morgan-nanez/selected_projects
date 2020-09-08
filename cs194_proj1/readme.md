@@ -1,6 +1,6 @@
 # Colorizing the Prokudin-Gorskii Photo Collection 
 
-Foobar is a Python library for dealing with word pluralization.
+The goal of the project is to take the digitized Prokudin-Gorskii glass plate images and apply image processing techniques to automatically produce a color image. The basic method is to extract the three color channel images, place them on top of each other, and align them so that they form a single RGB color image.
 
 ## Data
 
@@ -18,4 +18,4 @@ In your terminal, run:
 ```
 
 ## Results
-Can be found at proj1.org
+Can be found at index.html
