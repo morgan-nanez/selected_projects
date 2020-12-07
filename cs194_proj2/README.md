@@ -15,16 +15,16 @@ of that. Finally, to turn this into an edge image and to suppress some
 noise, I binarized the gradient magnitude image by using a threshold =
 0.15. Below are my results:
 
-+--------------------------------------+--------------------------------------+
+:--------------------------------------:--------------------------------------:
 | *![partial derivative of             | *![partial derivative of             |
 | x](output/11_dx.jpg)partial          | y](output/11_dy.jpg)partial          |
 |  derivative of x*                    |  derivative of y*                    |
-+--------------------------------------+--------------------------------------+
+:--------------------------------------:--------------------------------------:
 | *![gradient magnitude                | *![binarized edge                    |
 | ](output/11_grad_mag.jpg)**gradient  | image](output/11_binmag.jpg)binarize |
 | magnitude*                           | d                                    |
 |                                      | edge image*                          |
-+--------------------------------------+--------------------------------------+
+:--------------------------------------:--------------------------------------:
 
 
 #### Part 1.2: Derivative of Gaussiam (DoG) Filter
