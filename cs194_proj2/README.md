@@ -15,7 +15,7 @@ of that. Finally, to turn this into an edge image and to suppress some
 noise, I binarized the gradient magnitude image by using a threshold =
 0.15. Below are my results:
 
-''' html
+```html
 <table style="height: 55px; margin-left: auto; margin-right: auto;" width="168">
 <tbody>
 <tr>
@@ -32,8 +32,7 @@ noise, I binarized the gradient magnitude image by using a threshold =
 </tr>
 </tbody>
 </table>
-
-'''
+```
 
 |:--------------------------------------:--------------------------------------:|
 | *![partial derivative of             | *![partial derivative of             |
