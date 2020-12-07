@@ -1,16 +1,16 @@
-🔴 Project 2: Fun with Frequencies  {color: #5e9ca0;}
+Project 2: Fun with Frequencies
 ================================
 
-Part 1: Fun with Filters {style="color: #2e6c80;"}
+Part 1: Fun with Filters
 ------------------------
 
 #### Part 1.1: Finite Difference Operator
 
 I began by creating two finite difference operators, one in the x
-direction, Dx, and one in the y direction, Dy. I then computed the the
+direction, Dx, and one in the y direction, Dy. I then computed the
 partial derivative x and y by using scipy.signal.conv2d to convolve the
 image with Dx and Dy seperately. To compute the gradient magnitude, I
-summed the sqaures of the partial derivatives then  took the square root
+summed the sqaures of the partial derivatives then took the square root
 of that. Finally, to turn this into an edge image and to suppress some
 noise, I binarized the gradient magnitude image by using a threshold =
 0.15. Below are my results:
@@ -26,7 +26,6 @@ noise, I binarized the gradient magnitude image by using a threshold =
 |                                      | edge image*                          |
 +--------------------------------------+--------------------------------------+
 
-####  
 
 #### Part 1.2: Derivative of Gaussiam (DoG) Filter
 
