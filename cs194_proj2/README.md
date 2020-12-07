@@ -15,12 +15,11 @@ of that. Finally, to turn this into an edge image and to suppress some
 noise, I binarized the gradient magnitude image by using a threshold =
 0.15. Below are my results:
 
-```html
 <table style="height: 55px; margin-left: auto; margin-right: auto;" width="168">
 <tbody>
 <tr>
-<td style="width: 76px; text-align: center;"><em><img src="output/11_dx.jpg" alt="partial derivative of x" width="200" height="200"/>partial &nbsp;derivative of x</em></td>
-<td style="width: 76px; text-align: center;"><em><img src="output/11_dy.jpg" alt="partial derivative of y" width="200" height="200"/>partial &nbsp;derivative of y</em></td>
+<td style="width: 76px; text-align: center;"><em><img src="output/11_dx.jpg" alt="partial derivative of x" width="200" height="200"/>partial derivative of x</em></td>
+<td style="width: 76px; text-align: center;"><em><img src="output/11_dy.jpg" alt="partial derivative of y" width="200" height="200"/>partial derivative of y</em></td>
 </tr>
 <tr>
 <td style="width: 76px; text-align: center;">
@@ -32,18 +31,6 @@ noise, I binarized the gradient magnitude image by using a threshold =
 </tr>
 </tbody>
 </table>
-```
-
-|:--------------------------------------:--------------------------------------:|
-| *![partial derivative of             | *![partial derivative of             |
-| x](output/11_dx.jpg)partial          | y](output/11_dy.jpg)partial          |
-|  derivative of x*                    |  derivative of y*                    |
-|:--------------------------------------:--------------------------------------:|
-| *![gradient magnitude                | *![binarized edge                    |
-| ](output/11_grad_mag.jpg)**gradient  | image](output/11_binmag.jpg)binarize |
-| magnitude*                           | d                                    |
-|                                      | edge image*                          |
-|:--------------------------------------:--------------------------------------:|
 
 #### Part 1.2: Derivative of Gaussiam (DoG) Filter
 
@@ -53,14 +40,21 @@ and cv2.getGaussianKernel(). I repeated the steps from 1.1, convolving
 the blurred image with Dx and Dy and computing the gradient magnitude
 and binarized edge image, with a threshold = 0.08. Here are my results:
 
-+--------------------------------------+--------------------------------------+
-| *![gradient                          | *![binarized edge                    |
-| magnitude](output/12_mag.jpg)*       | image](output/12_bin.jpg)*           |
-|                                      |                                      |
-| *gradient magnitude*                 | *binarized edge image*               |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/12_mag.jpg" alt="gradient magnitude" width="200" height="200" /></em></p>
+<p><em>gradient magnitude</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/12_bin.jpg" alt="binarized edge image" width="200" height="200" /></em></p>
+<p><em>binarized edge image</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
- 
 
 Compared to the results from 1.1, there is much less noise. This is a
 result of blurring the image before the convolution. 
@@ -70,29 +64,45 @@ derivative of gaussian filters. I convolve the gaussian with Dx and Dy,
 and apply  the same threshold as before. Below are DoG filters as images
 and the resulting gradient and edge image.
 
-+--------------------------------------+--------------------------------------+
-| *![DoG for Dx](output/12_dogx.jpg)*  | *![DoG for Dy](output/12_dogy.jpg)*  |
-|                                      |                                      |
-| *DoG for Dx*                         | *DoG for Dy*                         |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td>
+<p><em><img src="output/12_dogx.jpg" alt="DoG for Dx" width="200" height="200" /></em></p>
+<p style="text-align: center;"><em>DoG for Dx</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/12_dogy.jpg" alt="DoG for Dy" width="200" height="200" /></em></p>
+<p><em>DoG for Dy</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
- 
 
-+--------------------------------------+--------------------------------------+
-| *![gradient                          | *![binarized edge                    |
-| magnitude](output/12_mag2.jpg)*      | image](output/12_bin2.jpg)*          |
-|                                      |                                      |
-| *gradient magnitude*                 | *binarized edge image*               |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/12_mag2.jpg" alt="gradient magnitude" width="200" height="200"/></em></p>
+<p><em>gradient magnitude</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/12_bin2.jpg" alt="binarized edge image"width="200" height="200" /></em></p>
+<p><em>binarized edge image</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
 #### Part 1.3: Image Straightening 
 
-Here we automated straightening images. For each image, I looked at 50
+Here I automated straightening images. For each image, I looked at 50
 angles between -20 and 20 degrees. For each angle, I rotated the image
 using scipy.ndimage.interpolation.rotate. I then cropped the rotated
 image to only compute the gradient angles of the center of the image.
-After computinh the partical derivatives of both x and y, and using
-these to compute the gradient angles of image (arctan(-dy/dx)), I  then
+After computing the partial derivatives of both x and y, and using
+these to compute the gradient angles of image (arctan(-dy/dx)), I then
 summed up the number of horizontal and verticle edges in the image. I
 compared the summed total of horizontal and verticle edges for each
 angle, and determine the angle that produced the highest sum to be the
@@ -100,65 +110,113 @@ straightest. Below are my results.
 
 Facade image: rotated -2.04 degrees
 
-+--------------------------------------+--------------------------------------+
-| *![original                          | *![rotated                           |
-| facade](output/13_og_facade.jpg)*    | facade](output/13_rot_facade.jpg)*   |
-|                                      |                                      |
-| *original facade*                    | *rotated facade*                     |
-+--------------------------------------+--------------------------------------+
-| *![orientation                       | *![orientation                       |
-| histogram](output/13_og_hist_facade. | histogram](output/13_rot_hist_facade |
-| jpg)*                                | .jpg)*                               |
-|                                      |                                      |
-| *original orientation histogram*     | *rotated orientation histogram*      |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/13_og_facade.jpg" alt="original facade" width="200" height="200" /></em></p>
+<p><em>original facade</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_facade.jpg" alt="rotated facade" width="200" height="200"/></em></p>
+<p><em>rotated facade</em></p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/13_og_hist_facade.jpg" alt="orientation histogram" width="300" height="200" /></em></p>
+<p><em>original orientation histogram</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_hist_facade.jpg" alt="orientation histogram"  width="300" height="200"/></em></p>
+<p><em>rotated orientation histogram</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
  Austin Skyline image: rotated -11.84 degrees
 
-+--------------------------------------+--------------------------------------+
-| *![original                          | *![rotated                           |
-| facade](output/13_og_austin.jpg)*    | facade](output/13_rot_austin.jpg)*   |
-|                                      |                                      |
-| *original austin*                    | *rotated austin*                     |
-+--------------------------------------+--------------------------------------+
-| *![orientation                       | *![orientation                       |
-| histogram](output/13_og_hist_austin. | histogram](output/13_rot_hist_austin |
-| jpg)*                                | .jpg)*                               |
-|                                      |                                      |
-| *original orientation histogram*     | *rotated orientation histogram*      |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td>
+<p><em><img style="display: block; margin-left: auto; margin-right: auto;" src="output/13_og_austin.jpg" alt="original facade" width="200" height="200"/></em></p>
+<p style="text-align: center;"><em>original austin</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_austin.jpg" alt="rotated facade" width="200" height="200"/></em></p>
+<p><em>rotated austin</em></p>
+</td>
+</tr>
+<tr style="text-align: center;">
+<td>
+<p><em><img src="output/13_og_hist_austin.jpg" alt="orientation histogram" width="300" height="200"/></em></p>
+<p><em>original orientation histogram</em></p>
+</td>
+<td>
+<p><em><img src="output/13_rot_hist_austin.jpg" alt="orientation histogram" width="300" height="200"/></em></p>
+<p><em>rotated orientation histogram</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Leaning Tower of Pisa image: rotated 4.49 degrees
 
-+--------------------------------------+--------------------------------------+
-| *![original                          | *![rotated                           |
-| facade](output/13_og_pisa.jpg)*      | facade](output/13_rot_pisa.jpg)*     |
-|                                      |                                      |
-| *original pisa*                      | *rotated pisa*                       |
-+--------------------------------------+--------------------------------------+
-| *![orientation                       | *![orientation                       |
-| histogram](output/13_og_hist_pisa.jp | histogram](output/13_rot_hist_pisa.j |
-| g)*                                  | pg)*                                 |
-|                                      |                                      |
-| *original orientation histogram*     | *rotated orientation histogram*      |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/13_og_pisa.jpg" alt="original facade" width="200" height="200"/></em></p>
+<p><em>original pisa</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_pisa.jpg" alt="rotated facade" width="200" height="200"/></em></p>
+<p><em>rotated pisa</em></p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/13_og_hist_pisa.jpg" alt="orientation histogram" width="300" height="200" /></em></p>
+<p><em>original orientation histogram</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_hist_pisa.jpg" alt="orientation histogram" width="300" height="200" /></em></p>
+<p><em>rotated orientation histogram</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
 [FAILED] Round candy: rotated -15.9 degrees. The automated rotation
 failed in this case because it utilizes straight edges, whereas this
 image has minimal straight edges.
 
-+--------------------------------------+--------------------------------------+
-| *![original                          | *![rotated                           |
-| facade](output/13_og_candy.jpg)*     | facade](output/13_rot_candy.jpg)*    |
-|                                      |                                      |
-| *original round candy*               | *rotated round candy*                |
-+--------------------------------------+--------------------------------------+
-| *![orientation                       | *![orientation                       |
-| histogram](output/13_og_hist_candy.j | histogram](output/13_rot_hist_candy. |
-| pg)*                                 | jpg)*                                |
-|                                      |                                      |
-| *original orientation histogram*     | *rotated orientation histogram*      |
-+--------------------------------------+--------------------------------------+
+<table style="margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/13_og_candy.jpg" alt="original facade" width="200" height="200"/></em></p>
+<p><em>original round candy</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_candy.jpg" alt="rotated facade" width="200" height="200"/></em></p>
+<p><em>rotated round candy</em></p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<p><em><img src="output/13_og_hist_candy.jpg" alt="orientation histogram"width="300" height="200" /></em></p>
+<p><em>original orientation histogram</em></p>
+</td>
+<td style="text-align: center;">
+<p><em><img src="output/13_rot_hist_candy.jpg" alt="orientation histogram" width="300" height="200"/></em></p>
+<p><em>rotated orientation histogram</em></p>
+</td>
+</tr>
+</tbody>
+</table>
 
 Part 2: Fun with Frequencies
 ----------------------------
