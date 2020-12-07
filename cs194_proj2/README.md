@@ -15,6 +15,26 @@ of that. Finally, to turn this into an edge image and to suppress some
 noise, I binarized the gradient magnitude image by using a threshold =
 0.15. Below are my results:
 
+''' html
+<table style="height: 55px; margin-left: auto; margin-right: auto;" width="168">
+<tbody>
+<tr>
+<td style="width: 76px; text-align: center;"><em><img src="output/11_dx.jpg" alt="partial derivative of x" width="200" height="200"/>partial &nbsp;derivative of x</em></td>
+<td style="width: 76px; text-align: center;"><em><img src="output/11_dy.jpg" alt="partial derivative of y" width="200" height="200"/>partial &nbsp;derivative of y</em></td>
+</tr>
+<tr>
+<td style="width: 76px; text-align: center;">
+<p><em><img src="output/11_grad_mag.jpg" alt="gradient magnitude " width="200" height="200" /></em><em>gradient magnitude</em></p>
+</td>
+<td style="width: 76px; text-align: center;">
+<p><em><img src="output/11_binmag.jpg" alt="binarized edge image" width="200" height="200" />binarized edge image</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+
+'''
+
 |:--------------------------------------:--------------------------------------:|
 | *![partial derivative of             | *![partial derivative of             |
 | x](output/11_dx.jpg)partial          | y](output/11_dy.jpg)partial          |
@@ -25,7 +45,6 @@ noise, I binarized the gradient magnitude image by using a threshold =
 | magnitude*                           | d                                    |
 |                                      | edge image*                          |
 |:--------------------------------------:--------------------------------------:|
-
 
 #### Part 1.2: Derivative of Gaussiam (DoG) Filter
 
