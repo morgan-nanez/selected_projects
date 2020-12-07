@@ -15,37 +15,23 @@ of that. Finally, to turn this into an edge image and to suppress some
 noise, I binarized the gradient magnitude image by using a threshold =
 0.15. Below are my results:
 
-<table style="height: 55px; margin-left: auto; margin-right: auto;" width="168">
+\_!\[partial derivative of x\](output/11\_dx.jpg)partial derivative of x\_
 
-<tbody>
+\_!\[partial derivative of y\](output/11\_dy.jpg)partial derivative of y\_
 
-<tr>
+\_!\[gradient magnitude \](output/11\_grad\_mag.jpg)\_\_gradient magnitude\_
 
-<td style="width: 76px; text-align: center;">_![partial derivative of x](output/11_dx.jpg)partial derivative of x_</td>
+\_!\[binarized edge image\](output/11\_binmag.jpg)binarized edge image\_
 
-<td style="width: 76px; text-align: center;">_![partial derivative of y](output/11_dy.jpg)partial derivative of y_</td>
-
-</tr>
-
-<tr>
-
-<td style="width: 76px; text-align: center;">
-
-_![gradient magnitude ](output/11_grad_mag.jpg)__gradient magnitude_
-
-</td>
-
-<td style="width: 76px; text-align: center;">
-
-_![binarized edge image](output/11_binmag.jpg)binarized edge image_
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
+*   headingStyle (setext or atx)
+*   horizontalRule (\*, -, or \_)
+*   bullet (\*, -, or +)
+*   codeBlockStyle (indented or fenced)
+*   fence (\` or ~)
+*   emDelimiter (\_ or \*)
+*   strongDelimiter (\*\* or \_\_)
+*   linkStyle (inlined or referenced)
+*   linkReferenceStyle (full, collapsed, or shortcut)
 
 #### Part 1.2: Derivative of Gaussiam (DoG) Filter
 
