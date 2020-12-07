@@ -1,4 +1,4 @@
-Project 2: Fun with Frequencies  {color: #5e9ca0;}
+🔴 Project 2: Fun with Frequencies  {color: #5e9ca0;}
 ================================
 
 Part 1: Fun with Filters {style="color: #2e6c80;"}
