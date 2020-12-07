@@ -30,3 +30,7 @@ Here, I use neural networks to automatically detect facial keypoints. I begin by
 ## Autostitiching Photo Mosaics [cs194_proj5]
 
 This project is all about stitching together many photographs to create larger composite images. I begin my perfect my blending and warping algorithem on self selected correspondence points. For each image, I recover  the homographies, warp the image based on the recovered transformation, then blend the images into a mosaic. To automate this process of selecting corresspondencepoints, I first detect corner features of an image and extract a Feature Descriptor for each image. I match the feature descriptors between two images then use 4-point RANSAC to compute a robust homography estimate. I follow the same steps for warping and blending, using the proper homogrpaghy estimate, to create a beauitufl mosaic.
+
+## An End-to-End Encrypted File Sharing System [cs194_proj5]
+
+In a team of three, we designed and implement a secure file sharing system in Go. Users of our application will launch our client and provide their username and password. Once authenticated, they will use our client to upload and download files to/from the server. Our client will be the interface through which users can interact with the files stored on the server, such as sharing a file. Our design ensures confidentiality and integrity of files in addition to the basic file-sharing functionality.
