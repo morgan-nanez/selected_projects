@@ -1,6 +1,12 @@
 # Overview
 
-This repo that contains projects I either did alone from scratch or contributed heavily. Each project is within it's respective folder.
+This repo that contains projects I either did alone from scratch or contributed heavily. Each project is within it's respective folder. For specific project code email morgan.nanez@gmail.com
+
+## Classes in this repo
+DS100: Principles and Techniques of Data Science
+CS194: Computer Vision
+CS161: Cyber Security
+CS186: Database Systems and Architecture
 
 ## Influential Factors on Women’s Education in Indonesia [ds100_final]
 Myself and two others explore the factors that best determine what educational level a woman has achieved based on the 1987 National Indonesia Contraceptive Prevalence Survey. We used data science techniques to compare and contrast the prediction success or failure for 3 common prediction models:  Multi-Class Logistic Regression, Decision Tree, and Random Forest modeling.
