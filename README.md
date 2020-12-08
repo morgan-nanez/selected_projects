@@ -6,7 +6,6 @@ This repo that contains projects I either did alone or contributed heavily. Each
 DS100: Principles and Techniques of Data Science <br>
 CS194: Computer Vision <br>
 CS161: Cyber Security <br>
-CS186: Database Systems and Architecture <br>
 
 ## Influential Factors on Women’s Education in Indonesia [ds100_final]
 Myself and two others explore the factors that best determine what educational level a woman has achieved based on the 1987 National Indonesia Contraceptive Prevalence Survey. We used data science techniques to compare and contrast the prediction success or failure for 3 common prediction models:  Multi-Class Logistic Regression, Decision Tree, and Random Forest modeling.
