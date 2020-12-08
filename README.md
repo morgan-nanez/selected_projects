@@ -1,6 +1,6 @@
 # Overview
 
-This repo that contains projects I either did alone from scratch or contributed heavily. Each project is within it's respective folder. For specific project code email morgan.nanez@gmail.com
+This repo that contains projects I either did alone or contributed heavily. Each project is within it's respective folder. For specific project code email morgan.nanez@gmail.com.
 
 ## Classes in this repo
 DS100: Principles and Techniques of Data Science <br>
