@@ -199,7 +199,7 @@ Here we derive the unsharp masking technique. The first step is to create a low
 </tbody>
 </table>
 
-For evaluation. I picked a sharp image, blurred it using a gaussian filter, then passed this blurred image through the unsharp mask filter to obtaint the originail image.
+For evaluation. I picked a sharp image, blurred it using a gaussian filter, then passed this blurred image through the unsharp mask filter to obtaint the original image.
 
 <table>
 <col width="33%" />
@@ -219,7 +219,7 @@ For evaluation. I picked a sharp image, blurred it using a gaussian filter, then
 
 #### Part 2.2: Hybrid Images
 
-The basic idea of the hybrid image is that up close, the high  frequencies dominate our perception, but far away, the low frequencies dominate. I took two images, one to dominate low frequencies, and one to dominate high frequencies. I used a guassian filter to create a low  pass of image 1 and followed a similar technique as in 2.1 to obtain the high-frequencies of image 2. To compute the hybrid image, I simply take the average of the low-pass image summed with high-pass image. Below are my results.
+The basic idea of the hybrid image is that up close, the high frequencies dominate our perception, but far away, the low frequencies dominate. I took two images, one to dominate low frequencies, and one to dominate high frequencies. I used a guassian filter to create a low pass of image 1 and followed a similar technique as in 2.1 to obtain the high-frequencies of image 2. To compute the hybrid image, I simply take the average of the low-pass image summed with high-pass image. Below are my results.
 
 Derek and his cat
 
@@ -345,7 +345,7 @@ To create the gaussian stack, I apply the Gaussian filter at each level, creati
 
 #### Part 2.4: Multiresolution Blending
 
-The goal is two blend two images seamlessly using a multiresolution blending. To do so, I will be utilizing guassian and laplacian stacks. I begin by computing the gaussian and laplacian stacks for two images, again using 5 levels for each stack. I also create  a gaussian stack for my mask image. To create the blended image I follow the following equation LSl(i, j) = GRl(i, j)LAl(i, j) + (1 - GRl(i, j))LBl(i, j). Where A and B are the images to be blended together and R is the mask. I then sum LS to create the final blended image. Below are my results
+The goal is two blend two images seamlessly using a multiresolution blending. To do so, I will be utilizing guassian and laplacian stacks. I begin by computing the gaussian and laplacian stacks for two images, again using 5 levels for each stack. I also create a gaussian stack for my mask image. To create the blended image I follow the following equation LSl(i, j) = GRl(i, j)LAl(i, j) + (1 - GRl(i, j))LBl(i, j). Where A and B are the images to be blended together and R is the mask. I then sum LS to create the final blended image. Below are my results
 
 <table>
 <col width="25%" />
@@ -389,7 +389,6 @@ The goal is two blend two images seamlessly using a multiresolution blending. T
 
 To illustrate the process, I applied the Laplacian stack to the blended image, showcasing the mask that created it.
 
- 
 
 <table>
 <col width="25%" />
