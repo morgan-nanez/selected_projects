@@ -6,7 +6,7 @@ Part 1: Fun with Filters
 
 #### Part 1.1: Finite Difference Operator
 
-I began by creating two finite difference operators, one in the x direction, Dx, and one in the y direction, Dy. I then computed the the partial derivative x and y by using scipy.signal.conv2d to convolve the image with Dx and Dy seperately. To compute the gradient magnitude, I summed the sqaures of the partial derivatives then  took the square root of that. Finally, to turn this into an edge image and to suppress some noise, I binarized the gradient magnitude image by using a threshold = 0.15. Below are my results:
+I began by creating two finite difference operators, one in the x direction, Dx, and one in the y direction, Dy. I then computed the the partial derivative x and y by using scipy.signal.conv2d to convolve the image with Dx and Dy seperately. To compute the gradient magnitude, I summed the sqaures of the partial derivatives then took the square root of that. Finally, to turn this into an edge image and to suppress some noise, I binarized the gradient magnitude image by using a threshold = 0.15. Below are my results:
 
 <table>
 <col width="50%" />
@@ -27,7 +27,7 @@ I began by creating two finite difference operators, one in the x direction, Dx,
 
 #### Part 1.2: Derivative of Gaussiam (DoG) Filter
 
-I first created a blurred version of the original image by convolving the image with a 2 dimensional gaussian, using scipy.signal.convolve2d and cv2.getGaussianKernel(). I repeated the steps from 1.1, convolving the blurred image with Dx and Dy and computing the gradient magnitude and binarized edge image, with a threshold = 0.08. Here are my results:
+I first created a blurred version of the original image by convolving the image with a 2 dimensional gaussian filter, using scipy.signal.convolve2d and cv2.getGaussianKernel() with ksize = 3 and sigma = 1. I repeated the steps from 1.1, convolving the blurred image with Dx and Dy and computing the gradient magnitude and binarized edge image, with a threshold = 0.08. Here are my results:
 
 <table>
 <col width="50%" />
@@ -44,9 +44,9 @@ I first created a blurred version of the original image by convolving the image
 
  
 
-Compared to the results from 1.1, there is much less noise. This is a result of blurring the image before the convolution. 
+Compared to the results from 1.1, there is much less noise and the edges are amplified. This is a result of blurring the image before the convolution. 
 
-I then put these steps into a single convolution by creating a derivative of gaussian filters. I convolve the gaussian with Dx and Dy, and apply  the same threshold as before. Below are DoG filters as images and the resulting gradient and edge image.
+I then put these steps into a single convolution by creating a derivative of gaussian filters. I convolve the gaussian with Dx and Dy, and apply the same threshold as before. Below are DoG filters as images and the resulting gradient and edge image.
 
 <table>
 <col width="50%" />
@@ -78,7 +78,7 @@ I then put these steps into a single convolution by creating a derivative of ga
 
 #### Part 1.3: Image Straightening 
 
-Here we automated straightening images. For each image, I looked at 50 angles between -20 and 20 degrees. For each angle, I rotated the image using scipy.ndimage.interpolation.rotate. I then cropped the rotated image to only compute the gradient angles of the center of the image. After computinh the partical derivatives of both x and y, and using these to compute the gradient angles of image (arctan(-dy/dx)), I  then summed up the number of horizontal and verticle edges in the image. I compared the summed total of horizontal and verticle edges for each angle, and determine the angle that produced the highest sum to be the straightest. Below are my results.
+Here we automated straightening images. For each image, I looked at 50 angles between -20 and 20 degrees. For each angle, I rotated the image using scipy.ndimage.interpolation.rotate. I then cropped the rotated image to only compute the gradient angles of the center of the image. After computing the partial derivatives of both x and y, and using these to compute the gradient angles of image (arctan(-dy/dx)), I  then summed up the number of horizontal and verticle edges in the image. I compared the summed total of horizontal and verticle edges for each angle, and determine the angle that produced the highest sum to be the straightest. Below are my results.
 
 Facade image: rotated -2.04 degrees
 
