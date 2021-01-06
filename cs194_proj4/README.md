@@ -1,11 +1,11 @@
-**Project 4: **Facial Keypoint Detection with Neural Networks
+Project 4: Facial Keypoint Detection with Neural Networks
 =============================================================
 
-In this project, we learn to use neaural networks to to automatically detect facial keypoints!
+In this project, we use convolutional neural networks to  automatically detect facial keypoints!
 
 ### Part 1: Nose Tip Detection
 
-I began by loading in images from the IMM Face Database. Below are sampled image from my custom dataloader visualized with ground-truth keypoints.
+I began by loading in images from the IMM Face Database to use for training our toy models. For preprocessing, I rescale images to be of size 60x40 pixels, transform the images to greyscale, and normalize the pixel values between -0.5 and 0.5. Below are sampled image from my custom dataloader visualized with ground-truth keypoints.
 
 <table>
 <col width="33%" />
@@ -23,8 +23,6 @@ I began by loading in images from the IMM Face Database. Below are sampled imag
 </tbody>
 </table>
 
- 
-
 My neural network was as follows:
 
 NoseNet(
@@ -36,7 +34,8 @@ NoseNet(
  (fc2): Linear(in\_features=200, out\_features=2, bias=True)
 )
 
-Here is my training and validation accuracy during the training process:
+I used mean squared error loss as the prediction loss and trained the network using the Adam optimizer with a learning rate of 0.001.
+I trained my model over 25 epochs. Here is my training and validation accuracy during the training process:
 
 <table>
 <col width="50%" />
@@ -68,6 +67,8 @@ Here are my results:
 </tbody>
 </table>
 
+Looking at these results, I think this initial model preforms quite well on most photos.
+
 <table>
 <col width="50%" />
 <col width="50%" />
@@ -85,7 +86,7 @@ I think the neural netwok failed in these cases because my training sample was j
 
 ### Part 2: Full Facial Keypoint Detection
 
-I followed a similar structure for this portion  of the project as well. To prevent the trained model from overfitting, I augmented the data by rotating the image by random angle between (-10, 10) degrees as well as by randoming chaing the images' brightness, hue, saturation, and contrast. Here are sampled image from your dataloader visualized with ground-truth keypoints.
+I followed a similar structure for this portion of the project as well. To prevent the trained model from overfitting, I augmented the data by rotating the image by random angle between (-10, 10) degrees as well as by randomly changing the images' brightness, hue, saturation, and contrast. Here are sampled image from my dataloader visualized with ground-truth keypoints.
 
 <table>
 <col width="33%" />
@@ -103,8 +104,6 @@ I followed a similar structure for this portion  of the project as well. To pre
 </tbody>
 </table>
 
- 
-
 My neural network was a follows:
 
 FaceNet(
@@ -118,11 +117,9 @@ FaceNet(
  (fc2): Linear(in\_features=420, out\_features=112, bias=True)
 )
 
-As for hyperparamters, I used a batch size of 1 and learning of 0.0001. I used the Adam Optimizer and MSE for loss.
+As for hyperparamters, I used a batch size of 1 and learning of 0.0001. Again, I used the Adam Optimizer and MSE for loss.
 
- 
-
-Here is my training and validation accuracy during the training process:
+Here is my training and validation accuracy during the training process, over 30 epochs:
 
 <table>
 <col width="50%" />
@@ -165,9 +162,8 @@ Here are my results:
 </tbody>
 </table>
 
- 
 
-Again, I think this dataset was rather small to train which can contribute the wrong detections. The missed detections could from exposure, or some other image attribute, being too dramatic or lack there of, cause the image to be an outlier and thus making the neural network less keen to it.
+Again, I think this dataset was rather small to train which can contribute the wrong detections. The missed detections could result from exposure, or some other image attribute, being too dramatic or lack there of, cause the image to be an outlier and thus making the neural network less keen to it.
 
 Here is a visualiztion of my learned filters:
 
@@ -248,9 +244,6 @@ Here are my results on the testing dataset:
 </tbody>
 </table>
 
- 
-
- 
 
 I then tested my model on 3 personal images. I got them mostly right, the offset is most likely due to either a not perfect model, or variations in my cropping when passing the images through the neural net.
 
