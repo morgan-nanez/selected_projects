@@ -24,7 +24,7 @@ The goal of the project is to produce a "morph" animation of my face into someon
 
 ## Face Key-point Detection with Neural Networks [cs194_proj4]
 
-Here, I use neural networks to automatically detect facial keypoints. I begin by just detecting a person's nose tip, then eventually to detect 56 facial key points. I used PyTorch to create a custom DataLoader and preformed pre-processing data augmentation to prevent the model from overfitting. I then created a convolutional neural network and trained it on the IMM Face Database
+Here, I use convolutional neural networks to automatically detect facial keypoints. I begin by just detecting a person's nose tip, then eventually to detect 56 facial key points. I used PyTorch to create a custom DataLoader and preformed pre-processing data augmentation to prevent the model from overfitting. I then created a convolutional neural network and trained it on the IMM Face Database
 
 ## Autostitiching Photo Mosaics [cs194_proj5]
 
