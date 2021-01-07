@@ -25,11 +25,11 @@ Style Images:
 <col width="33%" />
 <tbody>
 <tr class="odd">
-<td align="left"><p><img src="style_images/starry_night.jpg" /></p>
+<td align="center"><p><img src="style_images/starry_night.jpg" width = "300" height = "300"/></p>
 <p>The Starry Night by Vincent can Gogh</p></td>
-<td align="left"><p><img src="style_images/shipweck.jpg" /></p>
+<td align="center"><p><img src="style_images/shipweck.jpg" width = "300" height = "300" /></p>
 <p>The Shipwreck of the Minotaur by J.M.W. Turner</p></td>
-<td align="left"><p><img src="style_images/the_scream.jpg" /></p>
+<td align="center"><p><img src="style_images/the_scream.jpg" width = "300" height = "300" /></p>
 <p>Der Scheri by Edvard Munch</p></td>
 </tr>
 </tbody>
@@ -43,19 +43,19 @@ Mixed content and style:
 <col width="33%" />
 <tbody>
 <tr class="odd">
-<td align="center"><p><img src="generated/necktarfront_x_starry_night.png" /></p>
+<td align="center"><p><img src="generated/necktarfront_x_starry_night.png" width = "300" height = "300"/></p>
 <p>Starry Night x Neckarfront</p></td>
-<td align="center"><p><img src="generated/necktarfront_x_shipwreck.png" /></p>
+<td align="center"><p><img src="generated/necktarfront_x_shipwreck.png" width = "300" height = "300"/></p>
 <p>Shipwreck x Neckarfront</p></td>
-<td align="center"><p><img src="generated/nacktarfront_x_scream.png" /></p>
+<td align="center"><p><img src="generated/nacktarfront_x_scream.png" width = "300" height = "300"/></p>
 <p>Dan Sheri x Neckarfront</p></td>
 </tr>
 </tbody>
 </table>
 
-Compared to the images in the paper, we don't think we captured the style as strongly as  we would have preferred, even when using an alpha/beta ratio \> 10\^6. 
+Compared to the images in the paper, I don't think I captured the style as strongly as I would have preferred, even when using an alpha/beta ratio \> 10\^6. 
 
-Here are the results of different styles to our own images
+Here are the results of different styles to my own images
 
 Content Images:
 
@@ -83,11 +83,11 @@ Style Images:
 <col width="33%" />
 <tbody>
 <tr class="odd">
-<td align="center"><p><img src="style_images/memory.jpg" /></p>
+<td align="center"><p><img src="style_images/memory.jpg" width = "300" height = "300"/></p>
 <p>Persistence of Memory by Salvidor Dali</p></td>
-<td align="center"><p><img src="style_images/picasso.jpg" /></p>
+<td align="center"><p><img src="style_images/picasso.jpg" width = "300" height = "300"/></p>
 <p>Three Musicians by Picasso</p></td>
-<td align="center"><p><img src="content_images/soli.jpg" /></p>
+<td align="center"><p><img src="content_images/soli.jpg"width = "300" height = "300" /></p>
 <p>Morgan's Dog</p></td>
 </tr>
 </tbody>
@@ -101,11 +101,11 @@ Mixed Content and Style Images: Style Images
 <col width="33%" />
 <tbody>
 <tr class="odd">
-<td align="left"><p><img src="generated/sol_x_memory.png" /></p>
+<td align="center"><p><img src="generated/sol_x_memory.png" width = "300" height = "300"/></p>
 Dali x Sol/p&gt;</td>
-<td align="left"><p><img src="generated/picasso_x_supper.png" /></p>
+<td align="center"><p><img src="generated/picasso_x_supper.png" width = "300" height = "300" /></p>
 <p>Picasso x Last Supper</p></td>
-<td align="left"><p><img src="generated/soli_x_chaos.png" /></p>
+<td align="center"><p><img src="generated/soli_x_chaos.png" width = "300" height = "300" /></p>
 <p>Sol x Chaos</p></td>
 </tr>
 </tbody>
