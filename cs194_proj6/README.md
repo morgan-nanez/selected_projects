@@ -7,7 +7,7 @@ For this project, I used a PyTorch's pretrained VGG19 feature space. I changed a
 
 Here is the total feature space:
 
-![](model.png)
+![](model.png width = "300" height = "300")
 
 For content activation, I used the second convolutional layer in the 4th block. For style activations, I used the first convolutional  layer in each of the 5 blocks. I initally used optim.lbfgs as our omtimizer but found better results once switching to optim.Adam. I also used a learning rate of 0.01 and found the best results between 1500 and 3000 iterations. A difference between my model and the proposed steps in the paper, is that I did not use a  hite noise image as my input. Instead, I found better results using the content image as my input into the model.
 
