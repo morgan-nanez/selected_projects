@@ -50,8 +50,6 @@ I trained my model over 25 epochs. Here is my training and validation accuracy d
 </tbody>
 </table>
 
-** **
-
 Here are my results:
 
 <table>
@@ -86,7 +84,7 @@ I think the neural netwok failed in these cases because my training sample was j
 
 ### Part 2: Full Facial Keypoint Detection
 
-I followed a similar structure for this portion of the project as well. To prevent the trained model from overfitting, I augmented the data by rotating the image by random angle between (-10, 10) degrees as well as by randomly changing the images' brightness, hue, saturation, and contrast. Here are sampled image from my dataloader visualized with ground-truth keypoints.
+I followed a similar structure for this portion of the project as well. To prevent the trained model from overfitting, I augmented the data by rotating the image by random angle, between -10 and 10 degrees, as well as by randomly changing the images' brightness, hue, saturation, and contrast. Here are sampled image from my dataloader visualized with ground-truth keypoints.
 
 <table>
 <col width="33%" />
@@ -185,7 +183,7 @@ Here is a visualiztion of my learned filters:
 
 ### Part 3: Large Dataset
 
-For this part, I utilized a google colab in addition to a GPU. I sampled images from the 'ibug face in the wild dataset'. I augmented the data for this section as well, again rotating the image and randomly changing image attributes. Below are sampled image from my custom dataloader visualized with ground-truth keypoints.
+For this part, I utilized google colab in addition to a GPU. I sampled images from the 'ibug face in the wild dataset'. I augmented the data for this section as well, again rotating the image and randomly changing image attributes. Below are sampled image from my custom dataloader visualized with ground-truth keypoints.
 
 <table>
 <col width="33%" />
@@ -203,9 +201,8 @@ For this part, I utilized a google colab in addition to a GPU. I sampled images 
 </tbody>
 </table>
 
- 
 
-My neural network is the ResNet18 which is predefined PyTorch models. I made two modifications inclusing making the first layer input channel to 1 for as the inputs are grayscale images. I also made last layer's output channel number be 68 \* 2 = 136. I choose learning rate to lr = 0.001, as used a batch size of 1. I used the same optimizer and loss function as peviously described
+My neural network is the ResNet18 which is a predefined PyTorch model. I made two modifications including making the first layer input channel to 1  as the inputs are grayscale images. I also made last layer's output channel number be 68 * 2 = 136, since there are 68 landmarks for each image. I choose learning rate to be lr = 0.001, and used a batch size of 1. I used the same optimizer and loss function as peviously described.
 
 Here is my training and validation accuracy during the training process:
 
@@ -222,9 +219,7 @@ Here is my training and validation accuracy during the training process:
 </tbody>
 </table>
 
-** **
-
-After training the data set, I found the the Mean Squared Error on the whole testing data set to be 15.96319
+After training the data set, I found the the mean squared error on the whole testing data set to be 15.96319.
 
 Here are my results on the testing dataset:
 
