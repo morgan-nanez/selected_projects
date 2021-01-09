@@ -18,9 +18,6 @@ The goal of the project is to take the digitized Prokudin-Gorskii glass plate im
 
 In this project, I convolve a gaussian filter with an image's Dx and Dy, creating a Derivative of a gaussian filter (DoG). I use the DoG to automatically straighten an image. I then use the unsharp masking technique to "sharpen" images. I do this by subtracting the blurred version from the original image to get the high frequencies of the image and add these frequencies back onto the original image. I then create hybrid images by blending the high frequency portion of one image with the low-frequency portion of another. I show this further by using Gaussian and Laplacian Stacks. Finally, I blend two images seamlessly using a multi resolution blending.  
 
-## Face Morphing and Modeling a Photo Collection [cs194_proj3]
-
-The goal of the project is to produce a "morph" animation of my face into someone else's face, compute the mean of a population of faces and extrapolate from a population mean to create a caricature of yourself.
 
 ## Face Key-point Detection with Neural Networks [cs194_proj4]
 
