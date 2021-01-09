@@ -1,4 +1,4 @@
-Final Project 1: Reimplementation of A Neural Algorithm of Artistic Style
+Reimplementation of A Neural Algorithm of Artistic Style
 =========================================================================
 
 Reimplement: A Neural Algorithm of Artistic Style

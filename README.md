@@ -18,9 +18,6 @@ The goal of the project is to take the digitized Prokudin-Gorskii glass plate im
 
 In this project, I convolve a gaussian filter with an image's Dx and Dy, creating a Derivative of a gaussian filter (DoG). I use the DoG to automatically straighten an image. I then use the unsharp masking technique to "sharpen" images. I do this by subtracting the blurred version from the original image to get the high frequencies of the image and add these frequencies back onto the original image. I then create hybrid images by blending the high frequency portion of one image with the low-frequency portion of another. I show this further by using Gaussian and Laplacian Stacks. Finally, I blend two images seamlessly using a multi resolution blending.  
 
-## Face Morphing and Modeling a Photo Collection [cs194_proj3]
-
-The goal of the project is to produce a "morph" animation of my face into someone else's face, compute the mean of a population of faces and extrapolate from a population mean to create a caricature of yourself.
 
 ## Face Key-point Detection with Neural Networks [cs194_proj4]
 
@@ -33,8 +30,6 @@ This project is all about stitching together many photographs to create larger c
 ## Reimplement: A Neural Algoritm of Artistic Style [cs194_proj6]
 In this project, I reimplement Gatys et al's 2015 paper. The goal is to extract the style of one image and apply it to the content of another image. I do this by using the feature space provided by PyTorch's pretrained VGG19 model. For content activation, I used the second convolutional layer in the 4th block. For style activations,I used the first convolutional layer in each of the 5 blocks, as described in the paper. For faster results, I  utilized the GPU on Google Colab.
 
-## High Dynamic Range Imaging [cs194_proj7]
-In this project, I automatically combine multiple exposures into a single high dynamic range radiance map, and then convert this radiance map to an image suitable for display through tone mapping.
 
 ## An End-to-End Encrypted File Sharing System [cs161_proj2]
 
